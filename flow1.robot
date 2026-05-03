@@ -5,6 +5,7 @@
 *** Settings ***
 
 Library    QWeb
+Library    QForce
 
 *** Test Cases ***
 
