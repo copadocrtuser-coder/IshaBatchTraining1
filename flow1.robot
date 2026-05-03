@@ -6,6 +6,7 @@
 
 Library    QWeb
 Library    QForce
+Library     QVision
 
 *** Test Cases ***
 
