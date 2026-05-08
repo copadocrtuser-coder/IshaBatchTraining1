@@ -14,7 +14,7 @@ ${username}            ${Manju_TestData.username}
 ${Password}            ${Manju_TestData.Password}
 
 *** Test Cases ***
-
+ManjuTestHome
     [Documentation]    Data-driven test that loops through all rows in Manju_TestData dataset
     FOR                ${row}                      IN                  @{Manju_TestData}
         GoTo           ${BaseURL}
