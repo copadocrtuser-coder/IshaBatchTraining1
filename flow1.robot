@@ -1,6 +1,3 @@
-${Manju_TestData.username}${Manju_TestData.Password}
-# Test asset originally created using Copado QEditor
-
 *** Settings ***
 Library                     QWeb
 Library                     QForce
