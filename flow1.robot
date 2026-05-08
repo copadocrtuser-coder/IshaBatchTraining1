@@ -12,6 +12,7 @@ ${BaseURL}             https://practicetestautomation.com/practice-test-login/
 ManjuTestHome
     [Documentation]    Run login test for every row in Manju_TestData
     [Tags]             DataTable:Manju_TestData
+    Login With Dataset
 
 *** Keywords ***
 Login With Dataset
