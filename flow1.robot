@@ -10,8 +10,8 @@ Suite Setup            OpenBrowser                 about:blank                 c
 
 *** Variables ***
 ${BaseURL}             https://practicetestautomation.com/practice-test-login/
-${username}            student
-${Password}            Password123
+${username}            ${Manju_TestData.username}
+${Password}            ${Manju_TestData.Password}
 
 *** Test Cases ***
 
@@ -22,4 +22,4 @@ ManjuTestHome
     TypeText           Password                    ${Manju_TestData.Password}
     ClickText          Submit
     ClickText          Log out
-    
+
