@@ -4,22 +4,24 @@ ${Manju_TestData.username}${Manju_TestData.Password}#
 
 *** Settings ***
 
-Library                QWeb
-Library                QForce
-Suite Setup            OpenBrowser                 about:blank                 chrome
+Library           QWeb
+Library           QForce
+Suite Setup       OpenBrowser                 about:blank         chrome
 
 *** Variables ***
-${BaseURL}             https://practicetestautomation.com/practice-test-login/
-${username}            ${Manju_TestData.username}
-${Password}            ${Manju_TestData.Password}
+${BaseURL}        https://practicetestautomation.com/practice-test-login/
+${username}       ${Manju_TestData.username}
+${Password}       ${Manju_TestData.Password}
 
 *** Test Cases ***
 
-ManjuTestHome
-    [Documentation]    Test Case created using the QEditor
-    OpenBrowser        ${BaseURL}                  chrome
-    TypeText           Username                    ${Manju_TestData.username}
-    TypeText           Password                    ${Manju_TestData.Password}
-    ClickText          Submit
-    ClickText          Log out
+[Documentation]    Data-driven test that loops through all rows in Manju_TestData dataset
+    FOR           ${row}                      IN                  @{Manju_TestData}
+        GoTo      ${BaseURL}
+        TypeText                              Username            ${row}[username]
+        TypeText                              Password            ${row}[Password]
+        ClickText                             Submit
+        VerifyText                            Logged In Successfully
+        ClickText                             Log out
+    END
 
