@@ -6,6 +6,7 @@
 
 Library                QWeb
 Library                QForce
+Suite Setup            OpenBrowser                 about:blank                 chrome
 
 *** Variables ***
 ${BaseURL}             https://practicetestautomation.com/practice-test-login/
@@ -17,7 +18,7 @@ ${Password}            Password123
 ManjuTestHome
     [Documentation]    Test Case created using the QEditor
     OpenBrowser        ${BaseURL}                  chrome
-    ClickText          Store
+    TypeText           Store
     ClickText          See what's new
     SwitchWindow       NEW
     ClickText          Subscribe
