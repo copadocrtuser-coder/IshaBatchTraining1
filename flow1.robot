@@ -15,7 +15,7 @@ ${Password}       ${Manju_TestData.Password}
 
 *** Test Cases ***
 
-[Documentation]    Data-driven test that loops through all rows in Manju_TestData dataset
+    [Documentation]    Data-driven test that loops through all rows in Manju_TestData dataset
     FOR           ${row}                      IN                  @{Manju_TestData}
         GoTo      ${BaseURL}
         TypeText                              Username            ${row}[username]
