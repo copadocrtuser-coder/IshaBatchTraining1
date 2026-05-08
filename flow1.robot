@@ -18,7 +18,7 @@ ${Password}            Password123
 ManjuTestHome
     [Documentation]    Test Case created using the QEditor
     OpenBrowser        ${BaseURL}                  chrome
-    TypeText           Username                    ${username}
-    TypeText           Password                    ${Password}
+    TypeText           Username                    ${Manju_TestData.username}
+    TypeText           Password                    ${Manju_TestData.Password}
     ClickText          Submit
     
