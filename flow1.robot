@@ -18,3 +18,14 @@ ManjuTestHome
     ClickText               Submit
     VerifyText              Congratulations
     ClickText               Log out
+
+ManjuTestHome1
+    [Documentation]         Loops through all datasets in Manju_TestData
+    FOR                     ${row}                      IN                          @{Manju_TestData}
+        GoTo                ${BaseURL}
+        TypeText            Username                    ${row}[username]
+        TypeText            Password                    ${row}[Password]
+        ClickText           Submit
+        VerifyText          Congratulations
+        ClickText           Log out
+    END
