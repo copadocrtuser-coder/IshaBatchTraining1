@@ -18,11 +18,7 @@ ${Password}            Password123
 ManjuTestHome
     [Documentation]    Test Case created using the QEditor
     OpenBrowser        ${BaseURL}                  chrome
-    TypeText           Store
-    ClickText          See what's new
-    SwitchWindow       NEW
-    ClickText          Subscribe
-    ClickText          Subscribe                   anchor=. You may opt out at any time.
-    ClickText          Share
-    ClickText          Mail
-    CloseWindow
+    TypeText           Username                    ${username}
+    TypeText           Password                    ${Password}
+    ClickText          Submit
+    
