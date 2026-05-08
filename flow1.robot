@@ -7,6 +7,8 @@ Test Template          Login With Dataset
 
 *** Variables ***
 ${BaseURL}             https://practicetestautomation.com/practice-test-login/
+${Manju_TestData.username}
+${Manju_TestData.Password}
 
 *** Test Cases ***
 ManjuTestHome
