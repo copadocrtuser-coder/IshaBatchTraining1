@@ -1,4 +1,4 @@
-${Manju_TestData.username}${Manju_TestData.Password}#
+${Manju_TestData.username}${Manju_TestData.Password}
 # Test asset originally created using Copado QEditor
 
 *** Settings ***
