@@ -21,4 +21,5 @@ ManjuTestHome
     TypeText           Username                    ${Manju_TestData.username}
     TypeText           Password                    ${Manju_TestData.Password}
     ClickText          Submit
+    ClickText          Log out
     
