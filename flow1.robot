@@ -1,20 +1,23 @@
 *** Settings ***
-Library                     QWeb
-Library                     QForce
-Suite Setup                 OpenBrowser                 about:blank                 chrome
-Suite Teardown              CloseBrowser
+Library                QWeb
+Library                QForce
+Suite Setup            OpenBrowser                 about:blank                 chrome
+Suite Teardown         CloseBrowser
+Test Template          Login With Dataset
 
 *** Variables ***
-${BaseURL}                  https://practicetestautomation.com/practice-test-login/
-${Manju_TestData.username}
-${Manju_TestData.Password}
+${BaseURL}             https://practicetestautomation.com/practice-test-login/
 
 *** Test Cases ***
 ManjuTestHome
-    [Documentation]         Test using Dataset 01 values from Manju_TestData
-    GoTo                    ${BaseURL}
-    TypeText                Username                    ${Manju_TestData.username}
-    TypeText                Password                    ${Manju_TestData.Password}
-    ClickText               Submit
-    VerifyText              Congratulations
-    ClickText               Log out
+    [Documentation]    Run login test for every row in Manju_TestData
+    [Tags]             DataTable:Manju_TestData
+
+*** Keywords ***
+Login With Dataset
+    GoTo               ${BaseURL}
+    TypeText           Username                    ${Manju_TestData.username}
+    TypeText           Password                    ${Manju_TestData.Password}
+    ClickText          Submit
+    VerifyText         Congratulations
+    ClickText          Log out
