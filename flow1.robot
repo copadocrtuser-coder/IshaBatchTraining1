@@ -5,8 +5,6 @@ Suite Setup                 OpenBrowser                 about:blank         chro
 
 *** Variables ***
 ${BaseURL}                  https://practicetestautomation.com/practice-test-login/
-${username}                 ${Manju_TestData.username}
-${Password}                 ${Manju_TestData.Password}
 
 *** Test Cases ***
 ManjuTestHome
