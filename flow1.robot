@@ -21,7 +21,7 @@ ManjuTestHome
         TypeText       Username                    ${row}[username]
         TypeText       Password                    ${row}[Password]
         ClickText      Submit
-        VerifyText     Logged In Successfully
+        VerifyText     Congratulations
         ClickText      Log out
     END
 
