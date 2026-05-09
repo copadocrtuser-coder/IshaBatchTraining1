@@ -22,6 +22,7 @@ Login to Bank
     ClickText     REGISTER                    anchor=Confirm
 
 Open New Account
+    [Tags]        sanity
     ClickText     Open New Account
     VerifyText    What type of Account would you like to open?
 
