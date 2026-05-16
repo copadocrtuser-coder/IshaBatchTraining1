@@ -17,7 +17,7 @@ Suite Teardown      Close All Browsers
 
 Test case
     GoTo            https://propic.com.au
-    ClickText       Solutions
+    ClickText       Solutis
     ClickText       Sales                    anchor=Solutions
     ClickText       Get in touch             anchor=Terms and Conditions
     ClickText       Submit
