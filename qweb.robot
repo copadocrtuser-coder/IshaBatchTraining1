@@ -1,5 +1,7 @@
 *** Settings ***
 Library                QVision
+Library                QWeb
+Suite Setup            OpenBrowser     about:blank    chrome
 
 *** Test Cases ***
 WordPad Test Case
