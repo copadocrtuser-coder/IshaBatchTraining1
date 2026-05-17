@@ -10,6 +10,9 @@ Metadata            Exploration Id              57394
 
 # You can change imported library to "QWeb" if testing generic web application, not Salesforce.
 Library             QForce
+Library            QImage
+Library    Manju
+
 Suite Setup         Open Browser                about:blank                 chrome
 Suite Teardown      Close All Browsers
 
@@ -66,16 +69,20 @@ File Download
     SaveFile        //a[@type\='button']        samplefile.pdf
     SaveFile        //a[contains(text(),'Download')]                        samplefile.pdf
     VerifyFile      samplefile.pdf
+    ListBrowsers
+    CloseBrowser
 
 Upload File
     GoTo            https://practice.expandtesting.com/upload
     ClickText       Choose File
-
+    ClickElement    //input[@data-testid\='file-input']                     anchor=Upload
 
     ClickText       Upload
     TypeText        file                        C:\\fakepath\\__init__.py
     ClickText       Upload
-
+CloseAlert
+    CloseAlert      Accept
+    ClickText       Close
 RestBooker
     ClickText       Rooms                       anchor=Amenities
     ClickText       Booking                     anchor=Amenities
