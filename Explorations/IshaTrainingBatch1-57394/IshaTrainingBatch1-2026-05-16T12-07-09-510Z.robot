@@ -24,7 +24,59 @@ Test case
     Open browser    https://automationintesting.online/                     chrome        timeout=5s
     GoTo            https://parabank.parasoft.com/parabank/register.htm
     TypeSecret      Password                    ${Manju}
+    RefreshPage
 
+
+    ClickText       Register
+    TypeText        customer.firstName          Test
+    TypeText        customer.lastName           test
+    TypeText        customer.address.street     test
+    TypeText        customer.address.city       test
+    TypeText        customer.address.state      test
+    TypeText        customer.address.zipCode    test
+    TypeText        customer.phoneNumber        test
+    TypeText        customer.ssn                test
+    TypeText        customer.username           test
+    TypeSecret      customer.password           test
+    TypeSecret      repeatedPassword            test
+    ClickText       Register
+    ClickText       Open New Account
+    ClickText       Open New Account
+    ClickText       30327
+    ClickText       Funds Transfer Received
+    ClickText       Find Transactions
+    ClickText       Find Transactions           anchor=Find by Transaction ID
+    ClickText       Bill Pay
+    ClickText       Find Transactions
+    ClickText       Update Contact Info
+    ClickText       Request Loan
+    ClickText       Products                    anchor=Admin Page
+    ClickText       Learn More                  anchor=Find the Testing Solution That Fits Your Team Perfectly
+    ClickText       Learn More                  anchor=MISRA
+
+File Download
+    GoTo            https://demo.automationtesting.in/FileDownload.html
+    ClickText       Download                    anchor=Computers & Electronics
+    ClickElement    //a[@type\='button']
+    SaveFile        Download                    samplefile.pdf
+
+
+    GoTo            https://demo.automationtesting.in/FileDownload.html
+    VerifyText      File Download Demo for Automation
+    SaveFile        //a[@type\='button']        samplefile.pdf
+    SaveFile        //a[contains(text(),'Download')]                        samplefile.pdf
+    VerifyFile      samplefile.pdf
+
+Upload File
+    GoTo            https://practice.expandtesting.com/upload
+    ClickText       Choose File
+
+
+    ClickText       Upload
+    TypeText        file                        C:\\fakepath\\__init__.py
+    ClickText       Upload
+
+RestBooker
     ClickText       Rooms                       anchor=Amenities
     ClickText       Booking                     anchor=Amenities
     ClickText       Check Availability
