@@ -10,8 +10,8 @@ Metadata            Exploration Id              57394
 
 # You can change imported library to "QWeb" if testing generic web application, not Salesforce.
 Library             QForce
-Library            QImage
-Library    Manju
+Library             QImage
+Library             CopadoAI
 
 Suite Setup         Open Browser                about:blank                 chrome
 Suite Teardown      Close All Browsers
