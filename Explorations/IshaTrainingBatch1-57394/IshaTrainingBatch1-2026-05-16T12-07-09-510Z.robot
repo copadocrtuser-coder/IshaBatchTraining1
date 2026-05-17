@@ -19,10 +19,11 @@ ${Manju}            Manju123
 *** Test Cases ***
 
 Test case
+    Appstate        Home
     GoTo            https://automationintesting.online/
     Open browser    https://automationintesting.online/                     chrome        timeout=5s
     GoTo            https://parabank.parasoft.com/parabank/register.htm
-    TypeSecret     Password                    ${Manju}
+    TypeSecret      Password                    ${Manju}
 
     ClickText       Rooms                       anchor=Amenities
     ClickText       Booking                     anchor=Amenities
@@ -63,3 +64,7 @@ Test case
     ClickText       Contact                     anchor=Home
     ClickText       Contact                     anchor=Location
     ClickText       Mark Winteringham
+
+*** Keywords ***
+Home
+    Open browser    https://parabank.parasoft.com/parabank/register.htm     chrome
